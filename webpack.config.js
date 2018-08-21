@@ -7,9 +7,15 @@ module.exports = {
         app: "./src/index.js",
         print: "./src/print.js"
     },
+    devtool: "inline-source-map",
+    devServer: {
+        contentBase: "./dist",
+        open: "Google Chrome"
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].bundle.js"
+        filename: "[name].bundle.js",
+        publicPath: "/"
     },
     plugins: [
         new CleanWebPackPlugin(["./dist"]),
