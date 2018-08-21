@@ -12,7 +12,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            title: "Output Menagement"
+            template: "./src/index.tempalte.html",
+            title: "Title from plugin."
         })
     ]
 };
