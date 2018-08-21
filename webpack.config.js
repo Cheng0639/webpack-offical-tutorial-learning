@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CleanWebPackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -11,6 +12,7 @@ module.exports = {
         filename: "[name].bundle.js"
     },
     plugins: [
+        new CleanWebPackPlugin(["./dist"]),
         new HtmlWebPackPlugin({
             template: "./src/index.tempalte.html",
             title: "Title from plugin."
